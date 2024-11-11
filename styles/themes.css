@@ -10,6 +10,7 @@
 	--background-imge: url(../images/black.png);
 	--color-text:  #00CC14;
 	--color-border: #00CC14;
+<<<<<<< HEAD
 	--webkit-text-stroke: #000;
 	--backround-border: #fff;
 	--color-button: #00CC14;
@@ -21,6 +22,11 @@
 	--color-button: #000; 
 	--backround-border: #000;
 	--webkit-text-stroke: #fff;
+=======
+}
+
+:root.theme-light {
+>>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863
 	--background-color: #FFF;
 	--background-imge: url(../images/background.png);
 	--color-text:  #000;

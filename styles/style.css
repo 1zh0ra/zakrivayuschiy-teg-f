@@ -14,6 +14,7 @@
 
 */
 
+<<<<<<< HEAD
 .main {
   background-color: var(--background-color);
   display: flex;
@@ -23,11 +24,14 @@
   max-width: 696px;
   margin: 0 auto;
 }
+=======
+>>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863
 
 .page {
   font-family: "Inter";
   min-inline-size: 320px;
   min-block-size: 100dvb;
+<<<<<<< HEAD
   background-image: var(--background-imge);
   background-attachment: fixed;
   background-position: center;
@@ -61,10 +65,32 @@
   text-align: center;
   gap: 20px;
   background-color: var(--background-color);
+=======
+  background-color: var(--background-color);
+}
+
+.header {
+  padding: 100px 0 100px 0 ;
+  display: grid;
+  background-image: var(--background-imge);
+  position: relative;
+  color: var(--color-text);
+  font-family: "Press Start 2P";
+}
+
+.menu {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 120px;
+  background-color: var(--background-color);
+  border: 2px solid var(--color-border); 
+>>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863
 }
 
 .title {
   color: var(--color-text);
+<<<<<<< HEAD
   font-family: "Inter";
   font-size: 18px;
   line-height: 21px;
@@ -85,10 +111,29 @@
 
 .title-text {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+=======
+  font-family: 'Inter';
+  font-size: 18px;
+  line-height: 21.78px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.title-main {
+ font-size: 49px;
+ padding-bottom: 20px;
+ font-weight: 400;
+}
+
+.title-text {
+  font-size: 14px;
+  padding-bottom: 20px;
+>>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863
   font-weight: 400;
 }
 
 .theme-menu__list {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -353,3 +398,57 @@
     width: 28px;
   }
 }
+=======
+  display: grid;
+  gap: 14px;
+}
+
+.theme-menu {
+  padding-bottom: 25px;
+}
+
+.theme-menu__button {
+  background-color: var(--background-color);
+  font-size: 14px;
+}
+
+.card {
+  border: 2px solid var(--color-border); 
+  padding-bottom: 50px;
+}
+
+.img-color {
+  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.text__start {
+  display: inline-block;
+  max-width: 321px;
+  font-family: 'Inter';
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 200;
+  color: var(--color-text);
+  padding-top: 25px;
+}
+
+.button {
+  width: 130px;
+  height: 38px;
+  font-family: 'Press Start 2P';
+  color: var(--color-text);
+  background-color: var(--background-color);
+  border: 2px solid var(--color-border);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.for-work {
+  display: grid;
+  justify-content: space-around;
+  justify-items: end;
+}
+
+>>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863

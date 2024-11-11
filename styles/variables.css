@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-	--heart-icon-contour-color: #000;
-	--color-hearts:  #FF0000;
-	--color-button: #00CC14;
+  --heart-icon-contour-color: #000;
+  --color-hearts: #ff0000;
+  --color-button: #00cc14;
 }

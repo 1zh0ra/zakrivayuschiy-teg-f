@@ -1,45 +1,61 @@
-/* Этот скрипт использует имена классов theme-menu__button, theme-dark, theme-light и theme-auto;
-еще атрибуты disabled и data-theme. Поэтому их нельзя менять в HTML. */
-
 function changeTheme(theme) {
-  document.documentElement.className = '';
+  document.documentElement.className = "";
   document.documentElement.classList.add(`theme-${theme}`);
-  localStorage.setItem('theme', theme);
+  localStorage.setItem("theme", theme);
+}
+
+function setThemeAutomatically() {
+  const prefersDarkScheme = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const autoTheme = prefersDarkScheme ? "dark" : "light";
+  changeTheme(autoTheme);
 }
 
 (function initTheme() {
-  const theme = localStorage.getItem('theme');
-  if (theme) {
-    changeTheme(theme);
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    if (savedTheme === "auto") {
+      setThemeAutomatically();
+    } else {
+      changeTheme(savedTheme);
+    }
+  } else {
+    setThemeAutomatically();
+    localStorage.setItem("theme", "auto");
   }
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-  const root = document.documentElement;
-  const themeButtons = document.querySelectorAll('.theme-menu__button');
+document.addEventListener("DOMContentLoaded", () => {
+  const themeButtons = document.querySelectorAll(".theme-menu__button");
 
-  function setDisabled(theme) {
+  function setDisabled(currentTheme) {
     themeButtons.forEach((item) => {
-      if (item.getAttribute('data-theme') === theme) {
-        item.setAttribute('disabled', true);
+      if (item.getAttribute("data-theme") === currentTheme) {
+        item.setAttribute("disabled", true);
       } else {
-        item.removeAttribute('disabled');
+        item.removeAttribute("disabled");
       }
     });
   }
 
-  if ([...root.classList].includes('theme-light')) {
-    setDisabled('light');
-  } else if ([...root.classList].includes('theme-dark')) {
-    setDisabled('dark');
-  } else {
-    setDisabled('auto');
+  function updateThemeButtonState() {
+    const currentTheme = localStorage.getItem("theme") || "auto";
+    setDisabled(currentTheme);
   }
 
   themeButtons.forEach((button) => {
     button.onclick = () => {
-      changeTheme(button.getAttribute('data-theme'));
-      setDisabled(button.getAttribute('data-theme'));
+      const theme = button.getAttribute("data-theme");
+      if (theme === "auto") {
+        setThemeAutomatically();
+      } else {
+        changeTheme(theme);
+      }
+      localStorage.setItem("theme", theme);
+      updateThemeButtonState();
     };
   });
+
+  updateThemeButtonState();
 });

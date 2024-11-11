@@ -14,18 +14,11 @@
   </head>
 
   <body class="page">
-<<<<<<< HEAD
     <header class="header container-width">
       <div class="menu">
         <span class="title-main">&lt;/HTML&gt;</span>
         <h1 class="title-text">ЗАКРЫВАЮЩИЙ ТЕГ</h1>
       </div>
-=======
-    <header class="header">
-      <div class="menu">
-      <h1 class="title-main">/HTML</h1>
-      <h3 class="title-text">закрывающий тег</h3>
->>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -51,10 +44,8 @@
           </li>
         </ul>
       </nav>
-      </div>
     </header>
     <main class="main">
-<<<<<<< HEAD
       <article class="container card">
         <h2 class="title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="card__image-wrapper">
@@ -123,10 +114,7 @@
                 />
               </svg>
             </button>
-            <button
-              type="button "
-              class="button card__like-button"
-            >
+            <button type="button " class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -684,50 +672,32 @@
           </div>
         </div>
       </article>
-      <button class="model__triger-buttom button" type="button" onclick="window['dialog-id'].showModel()" aria-controls="dialog-id">
+
+      <button
+        class="modal__trigger-button button"
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
         <svg class="icon-floppy" width="39" height="39" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#icon-floppy"></use>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text"> Сохранить на&nbsp;память </span>
       </button>
-=======
-      <section class="card">
-          <h2 class="title">Фритрек и нулевой спринт: <br>Подготовка к работе</h2>
-          <picture>
-            <img
-            class="img-color"
-            src="./images/image.png"
-            alt="Оригинальная картинка"
-            loading="lazy"
-            >
-          </picture>
-        <div class="for-work">
-          <p class="text__start">
-            Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
-          </p>
-          <p class="text__start">Место для ваших воспоминаний о начале обучения.</p>
-          <button type="button" class="button">Like</button>
-         </div>
-      </section>
-      <section class="card">
-        <h2 class="title">1 спринт: Я — чистый лист</h2>
-        <picture>
-          <img
-          class="img-color"
-          src="./images/image (1).png"
-          alt="Оригинальная картинка"
-          loading="lazy"
-          >
-        </picture>
-      <div class="for-work">
-        <p class="text__start">
-          На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?
-        </p>
-        <p class="text__start">Место для ваших воспоминаний о начале первого спринта.</p>
-        <button type="button" class="button">Like</button>
-       </div>
-    </section>
->>>>>>> c6f9188aa1bde6963b7817aa29510f901e206863
+
+      <dialog id="dialog-id" class="popup-window">
+        <form class="popup-window_form" method="dialog">
+          <div class="popup-window_content">
+            <svg class="icon-floppy" width="39" height="39" viewBox="0 0 39 39">
+              <use href="./svg/floppy.svg#icon-floppy"></use>
+            </svg>
+            <p class="popup-window_text">Вставьте дискету, чтобы продолжить</p>
+          </div>
+          <button class="popup-window_button button" type="submit">
+            <span class="button__text">ок</span>
+          </button>
+        </form>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>

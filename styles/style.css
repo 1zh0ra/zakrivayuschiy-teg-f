@@ -14,7 +14,342 @@
 
 */
 
+.main {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  max-width: 696px;
+  margin: 0 auto;
+}
+
 .page {
+  font-family: "Inter";
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--background-imge);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: clamp(20.438rem, 19.5359rem + 3.849vw, 23rem);
+  background-color: var(--background-color);
+  justify-content: flex-end;
+  gap: 24px;
+  max-width: 696px;
+  margin: 100px auto;
+  padding: 25px 0;
+  color: var(--color-text);
+  font-family: "Press Start 2P";
+  border: 2px solid var(--color-border);
+}
+
+.container-width {
+  max-width: 696px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  background-color: var(--background-color);
+}
+
+.title {
+  color: var(--color-text);
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.for-work {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-weight: 400;
+}
+
+.title-text {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-weight: 400;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.theme-menu__item {
+  position: relative;
+  padding-inline-start: 21px;
+}
+
+.theme-menu__button {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: opacity 1s;
+}
+
+.theme-menu__button::before{
+   content:"";
+   padding: 0;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: arrow_shift 1s infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: alternate;
+  left: -85px;
+  top: 0;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  }
+
+  .theme-menu__button::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin-top: 2px;
+    background-color: var(--accent-color);
+    transition: width 300ms, background-color 1s;
+  }
+
+  .theme-menu__button:focus-visible::after {
+    width: 100%;
+    background-color: var(--accent-color);
+  }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-image: var(--background-imge);
+}
+
+.container {
+  border: 2px solid var(--color-border);
+  background-color: var(--background-color);
+  margin-inline: auto;
+  display: block;
+}
+
+.card__image-wrapper {
+  overflow: hidden;
+  height: 700px;
+  max-width: 696px;
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.saturate__image-min {
+  filter: saturate(20%);
+}
+
+.saturate__image-max {
+  filter: saturate(300%);
+}
+
+.rotate__image {
+  filter: hue-rotate(-330deg);
+}
+
+.invert__image {
+  filter: invert(0.7);
+}
+
+.sepia__image {
+  filter: sepia(90%);
+}
+
+.blure__image {
+  filter: blur(1rem);
+}
+
+.blender__image {
+  filter: brightness(50%) contrast(50%) hue-rotate(80deg) saturate(200%);
+}
+
+.decoration {
+  position: absolute;
+  top: 28px;
+  right: 25px;
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  color: var(--color-text);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--webkit-text-stroke);
+  text-shadow: none;
+}
+
+.card-description {
+  display: inline-block;
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.place {
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+
+.button-base {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  min-height: 38px;
+  gap: 7px;
+}
+
+.button {
+  font-family: "Press Start 2P";
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+  background-color: var(--background-color);
+  cursor: pointer;
+  position: relative;
+  border: none;
+  outline: 2px solid var(--color-border);
+}
+
+.button:focus {
+  border: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 2px var(--color-border);
+  outline: 2px solid var(--color-border);
+}
+
+.button::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-border);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.button:hover::after {
+  transform: translateX(0);
+  cursor: pointer;
+}
+
+.button__text {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  color: var(--color-button-text);
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+.card__like-button {
+  min-height: 38px;  
+  width: 130px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  min-height: 38px;
+  outline: 2px solid;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  border: none;
+}
+
+.card__icon-button:focus-visible {
+  color: var(--accent-color);
+  outline: 2px solid var(--accent-color);
+}
+
+.model__triger-buttom {
+  gap: 8px; 
+  margin-block-end: 100px;
+  margin-inline: auto;
+  width: 335px;
+  padding-block: 15px;
+}
+
+.icon-floppy {
+    width: 21px;
+    height: auto;
+    mix-blend-mode: difference;
+    position: relative;
+    z-index: 1;
+    color: var(--color-button-text);
+}
+
+@media (max-width: 375px) {
+  .card__image-wrapper {
+    width: 100%;
+    height: 371px;
+  }
+
+  .model__triger-buttom {
+    flex-direction: column;
+    width: 306px;
+  }
+  .icon-floppy {
+    width: 28px;
+  }
 }

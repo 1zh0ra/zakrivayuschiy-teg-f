@@ -25,7 +25,7 @@
 }
 
 .page {
-  font-family: "Inter";
+  font-family: Inter, sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background-imge);
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: clamp(20.438rem, 19.5359rem + 3.849vw, 23rem);
+  min-height: clamp(20.438rem, 19.5359rem + 3.849vw, 23rem);
   background-color: var(--background-color);
   justify-content: flex-end;
   gap: 24px;
@@ -47,8 +47,9 @@
   margin: 100px auto;
   padding: 25px 0;
   color: var(--color-text);
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", sans-serif;
   border: 2px solid var(--color-border);
+  text-transform: uppercase;
 }
 
 .container-width {
@@ -60,12 +61,11 @@
   flex-direction: column;
   text-align: center;
   gap: 20px;
-  background-color: var(--background-color);
 }
 
 .title {
   color: var(--color-text);
-  font-family: "Inter";
+  font-family: Inter, sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 700;
@@ -105,7 +105,7 @@
   border: none;
   background-color: transparent;
   text-transform: uppercase;
-  transition: opacity 1s;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::before {
@@ -148,7 +148,7 @@
   height: 2px;
   margin-top: 2px;
   background-color: var(--accent-color);
-  transition: width 300ms, background-color 1s;
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -219,18 +219,25 @@
   position: absolute;
   top: 28px;
   right: 25px;
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", sans-serif;
   font-size: 14px;
   color: var(--color-text);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--webkit-text-stroke);
-  text-shadow: none;
+  text-shadow: 0 0 1px var(--webkit-text-stroke);
 }
 
+@supports (-webkit-text-stroke: 1px var(--webkit-text-stroke)) or
+(text-stroke: 1px var(--webkit-text-stroke)){
+  .decoration{
+    -webkit-text-stroke: 1px var(--webkit-text-stroke);
+  }
+}
+
+
 .card-description {
-  display: inline-block;
-  font-family: "Inter";
+  display: flex;
+  font-family: Inter, sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -246,14 +253,14 @@
   display: flex;
   justify-content: end;
   width: 100%;
-  min-height: 38px;
+  max-height: 38px;
   gap: 7px;
 }
 
 .button {
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", sans-serif;
   overflow: hidden;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.3s;
   background-color: var(--background-color);
   cursor: pointer;
   position: relative;
@@ -289,7 +296,7 @@
 }
 
 .button__text {
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", sans-serif;
   font-size: 14px;
   position: relative;
   z-index: 1;

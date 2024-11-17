@@ -19,7 +19,7 @@
   --webkit-text-stroke: #000;
   --backround-border: #fff;
   --color-button: #00cc14;
-  --color-button-text: #000;
+  --color-button-text: #00cc14;
 }
 
 :root.theme-light {

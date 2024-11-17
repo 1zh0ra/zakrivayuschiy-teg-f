@@ -14,13 +14,29 @@
 
 */
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 368px;
+  background-color: var(--background-color);
+  gap: 25px;
+  max-width: 700px;
+  margin: 102px auto;
+  padding-top: 136px;
+  color: var(--color-text);
+  font-family: "Press Start 2P", sans-serif;
+  border: 2px solid var(--color-border);
+  text-transform: uppercase;
+}
+
 .main {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  max-width: 696px;
+  gap: 52px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -35,23 +51,6 @@
   background-size: cover;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: clamp(20.438rem, 19.5359rem + 3.849vw, 23rem);
-  background-color: var(--background-color);
-  justify-content: flex-end;
-  gap: 24px;
-  max-width: 696px;
-  margin: 100px auto;
-  padding: 25px 0;
-  color: var(--color-text);
-  font-family: "Press Start 2P", sans-serif;
-  border: 2px solid var(--color-border);
-  text-transform: uppercase;
-}
-
 .container-width {
   max-width: 696px;
 }
@@ -61,6 +60,7 @@
   flex-direction: column;
   text-align: center;
   gap: 20px;
+
 }
 
 .title {
@@ -91,8 +91,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  gap: 10px;
+  gap: 9px;
   font-size: 14px;
 }
 
@@ -106,6 +105,7 @@
   background-color: transparent;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
+  line-height: 13px;
 }
 
 .theme-menu__button::before {
@@ -173,9 +173,10 @@
 
 .card__image-wrapper {
   overflow: hidden;
-  height: 700px;
+  height: 698.8px;
   max-width: 696px;
   position: relative;
+  border: 2px solid black;
 }
 
 .card__image {
@@ -228,12 +229,11 @@
 }
 
 @supports (-webkit-text-stroke: 1px var(--webkit-text-stroke)) or
-(text-stroke: 1px var(--webkit-text-stroke)){
-  .decoration{
+  (text-stroke: 1px var(--webkit-text-stroke)) {
+  .decoration {
     -webkit-text-stroke: 1px var(--webkit-text-stroke);
   }
 }
-
 
 .card-description {
   display: flex;
@@ -252,8 +252,9 @@
 .button-base {
   display: flex;
   justify-content: end;
+  align-items: center;
   width: 100%;
-  max-height: 38px;
+  height: 38px;
   gap: 7px;
 }
 
@@ -306,8 +307,8 @@
 }
 
 .card__like-button {
-  min-height: 38px;
-  width: 130px;
+  height: 35px;
+  width: 128px;
 }
 
 .card__icon-button {
@@ -330,6 +331,9 @@
 }
 
 .modal__trigger-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 8px;
   margin-block-end: 100px;
   margin-inline: auto;
@@ -392,6 +396,7 @@
 .popup-window_text {
   display: block;
   max-width: 200px;
+  font-family: "Press Start 2P", sans-serif;
 }
 
 @media (max-width: 375px) {

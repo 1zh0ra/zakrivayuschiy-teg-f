@@ -28,6 +28,7 @@
   font-family: "Press Start 2P", sans-serif;
   border: 2px solid var(--color-border);
   text-transform: uppercase;
+  font-variation-settings: "wght" 750;
 }
 
 .main {

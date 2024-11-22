@@ -6,17 +6,16 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url(./Inter-Variable.woff2) format('woff2-variations'),
-  url(./Inter-Variable.woff) format('woff');
-  font-weight: bold;
-  font-display: swap;
+:root {
+  --font-weight-normal: 'wght' 400;
+  --font-weight-bold: 'wght' 785;
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url(./Inter-Variable.woff2) format('woff');
-  font-weight: 400;
-  font-display: swap;
+body {
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: var(--font-weight-normal);
+}
+
+strong {
+  font-variation-settings: var(--font-weight-bold);
 }

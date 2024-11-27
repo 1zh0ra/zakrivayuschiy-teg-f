@@ -4,4 +4,8 @@
   --heart-icon-contour-color: #000;
   --color-hearts: #ff0000;
   --color-button: #00cc14;
+  --main-font: "Inter-Variable";
+  --accent-font: "Press Start 2P";
+  --font-weight-card-title: 700;
+  --font-weight-card-text: 400;
 }

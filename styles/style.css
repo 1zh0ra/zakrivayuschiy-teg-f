@@ -18,21 +18,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 368px;
+  height: 368px;
   background-color: var(--background-color);
   gap: 25px;
   max-width: 700px;
   margin: 102px auto;
   padding-top: 136px;
   color: var(--color-text);
-  font-family: "Press Start 2P", fantasy;
+  font-family: var(--accent-font), fantasy;
   border: 2px solid var(--color-border);
   text-transform: uppercase;
   font-variation-settings: "wght" 750;
 }
 
 .main {
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +41,9 @@
 }
 
 .page {
-  font-family: Inter, sans-serif;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-card-text)
+    var(--font-weight-card-title);
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background-imge);
@@ -61,7 +62,6 @@
   flex-direction: column;
   text-align: center;
   gap: 20px;
-
 }
 
 .title {
@@ -106,7 +106,6 @@
   background-color: transparent;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-  line-height: 13px;
 }
 
 .theme-menu__button::before {
@@ -120,7 +119,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: "▶";
+  content: "▶️";
   position: absolute;
   animation: arrow_shift 1s infinite;
   animation-timing-function: ease-in-out;
@@ -148,13 +147,13 @@
   width: 0%;
   height: 2px;
   margin-top: 2px;
-  background-color: var(--accent-color);
-  transition: transform 0.3s ease;
+  background-color: var(--color-border);
+  transition: width 300ms, background-color 1s;
 }
 
 .theme-menu__button:focus-visible::after {
   width: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--color-border);
 }
 
 .section {
@@ -221,7 +220,7 @@
   position: absolute;
   top: 28px;
   right: 25px;
-  font-family: "Press Start 2P", sans-serif;
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   color: var(--color-text);
   opacity: 0.5;
@@ -260,7 +259,7 @@
 }
 
 .button {
-  font-family: "Press Start 2P", sans-serif;
+  font-family: var(--accent-font), sans-serif;
   overflow: hidden;
   transition: box-shadow 0.3s;
   background-color: var(--background-color);
@@ -298,7 +297,7 @@
 }
 
 .button__text {
-  font-family: "Press Start 2P", sans-serif;
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   position: relative;
   z-index: 1;
@@ -316,7 +315,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
-  min-height: 38px;
+  height: 35px;
   outline: 2px solid;
   color: transparent;
   transition: color 0.3s ease;
@@ -397,13 +396,19 @@
 .popup-window_text {
   display: block;
   max-width: 200px;
-  font-family: "Press Start 2P", sans-serif;
+  font-family: var(--accent-font), sans-serif;
+  color: var(--color-button);
 }
 
 @media (max-width: 375px) {
-  .card__image-wrapper {
+  .header {
     width: 100%;
-    height: 371px;
+    padding-block-start: 120px;
+    height: 325px;
+  }
+
+  .card__image-wrapper {
+    height: 374px;
   }
 
   .modal__trigger-button {

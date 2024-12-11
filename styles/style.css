@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 368px;
   background-color: var(--background-color);
   gap: 25px;
   max-width: 700px;
@@ -28,7 +27,6 @@
   font-family: var(--accent-font), fantasy;
   border: 2px solid var(--color-border);
   text-transform: uppercase;
-  font-variation-settings: "wght" 750;
 }
 
 .main {
@@ -110,7 +108,7 @@
 
 .theme-menu__button::before {
   content: "";
-  padding: 0;
+  padding: 0
 }
 
 .theme-menu__button:disabled {
@@ -119,7 +117,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: "▶️";
+  content: "▶";
   position: absolute;
   animation: arrow_shift 1s infinite;
   animation-timing-function: ease-in-out;
@@ -148,12 +146,11 @@
   height: 2px;
   margin-top: 2px;
   background-color: var(--color-border);
-  transition: width 300ms, background-color 1s;
 }
 
 .theme-menu__button:focus-visible::after {
   width: 100%;
-  background-color: var(--color-border);
+ 
 }
 
 .section {
@@ -225,7 +222,6 @@
   color: var(--color-text);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: 0 0 1px var(--webkit-text-stroke);
 }
 
 @supports (-webkit-text-stroke: 1px var(--webkit-text-stroke)) or
@@ -377,6 +373,7 @@
   display: grid;
   gap: 30px;
   align-self: center;
+  border: solid 2px var(--color-border) ;
 }
 
 .popup-window:is([open]) .icon-floppy {
@@ -417,5 +414,10 @@
   }
   .icon-floppy {
     width: 28px;
+  }
+
+  .decoration {
+    top: 20px;
+    right: 10px;
   }
 }

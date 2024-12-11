@@ -19,17 +19,17 @@
 
 .icon-core {
   fill: transparent;
-  transition: fill 0.3 linear;
+  transition: fill 0.3s linear;
 }
 
 .icon-main-body {
   fill: transparent;
-  transition: fill 0.3 linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .icon-contour {
-  fill: var(--color-button);
-  transition: fill 0.3 linear;
+  fill: var( --color-hearts);
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .icon-core {
